@@ -1,0 +1,39 @@
+html {
+  font-size: 62.5%;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f1f3f8;
+}
+
+.container {
+  width: 100vmin;
+  height: 100vmin;
+  display: grid;
+  grid-template-rows: repeat(21, 1fr);
+  grid-template-columns: repeat(21, 1fr);
+  background-color: #393b44;
+}
+
+.food {
+  grid-row: 1/span 1;
+  grid-column: 1/span 1;
+  background-color: orange;
+  border: 0.15vmin solid black;
+}
+
+.snake {
+  grid-row: 2/span 1;
+  grid-column: 2/span 1;
+  background-color: blue;
+  border: 0.15vmin solid black;
+}
+
+/*# sourceMappingURL=main.css.map */

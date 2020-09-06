@@ -1,0 +1,26 @@
+@use "variables"as var;
+
+.container {
+    width: 100vmin;
+    height: 100vmin;
+    display: grid;
+    grid-template-rows: repeat(21, 1fr);
+    grid-template-columns: repeat(21, 1fr);
+    background-color: var.$bg-color;
+}
+
+;
+
+.food {
+    grid-row: 1 / span 1;
+    grid-column: 1 /span 1;
+    background-color: orange;
+    border: var.$border;
+}
+
+.snake {
+    grid-row: 2/span 1;
+    grid-column: 2/span 1;
+    background-color: blue;
+    border: var.$border;
+}
