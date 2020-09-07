@@ -35,10 +35,19 @@ export function expandSnake(amount) { // expand snake if food was eaten
     newSegments += amount;
 }
 
-export function onSnake(position) { // check if any segments of the snake is on the food
-    return snakeBody.some((segment) => {
+export function onSnake(position, {ignoreHead = false} = {}) { // check if any segments of the snake is on the food
+    return snakeBody.some((segment, index) => {
+        if (ignoreHead && index === 0) return false;
         return equalPositions(segment, position);
     })
+}
+
+export function getSnakeHead() {
+    return snakeBody[0];
+}
+
+export function snakeIntersection() {
+    return onSnake(snakeBody[0], {ignoreHead : true});
 }
 
 function equalPositions(pos1, pos2) {
