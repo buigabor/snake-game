@@ -13,7 +13,7 @@ body {
   background-color: #f1f3f8;
 }
 
-.container {
+.game-board {
   width: 100vmin;
   height: 100vmin;
   display: grid;
@@ -23,16 +23,12 @@ body {
 }
 
 .food {
-  grid-row: 1/span 1;
-  grid-column: 1/span 1;
-  background-color: orange;
+  background-color: #ff8e6e;
   border: 0.15vmin solid black;
 }
 
 .snake {
-  grid-row: 2/span 1;
-  grid-column: 2/span 1;
-  background-color: blue;
+  background-color: #2ec1ac;
   border: 0.15vmin solid black;
 }
 
