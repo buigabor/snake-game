@@ -9,6 +9,7 @@ import {
     draw as drawFood,
 } from "./food.js";
 
+let gameOver = false;
 let lastRenderTime = 0;
 const gameBoard = document.body.querySelector(".game-board")
 
@@ -24,6 +25,7 @@ function main(currentTime) {
 function update() {
     updateSnake()
     updateFood();
+    checkDeath();
 }
 
 function draw() {
@@ -33,3 +35,7 @@ function draw() {
 }
 
 window.requestAnimationFrame(main);
+
+function checkDeath() {
+    gameOver = outsideGrid() || snakeIntersection()
+};
