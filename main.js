@@ -23,7 +23,7 @@ function main(currentTime) {
 
     if (gameOver) {
         if (confirm("You lost! Press Ok to restart.")) { //if you confirm the popup
-            window.location.reload(true); //refresh page
+            window.location.href = "https://buigabor.github.io/snake-game/"; //refresh page
         }
         return;
     }
