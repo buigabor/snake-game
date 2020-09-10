@@ -22,8 +22,8 @@ const gameBoard = document.body.querySelector(".game-board")
 function main(currentTime) {
 
     if (gameOver) {
-        if (confirm("You lost! Press Ok to restart.")){ //if you confirm the popup
-            window.location= "/"; //refresh page
+        if (confirm("You lost! Press Ok to restart.")) { //if you confirm the popup
+            window.location.reload(true); //refresh page
         }
         return;
     }
